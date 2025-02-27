@@ -1,11 +1,14 @@
 [workspace]
+members = [ 
+    "app", 
+    "prover",
+]
 resolver = "2"
-members = ["host", "methods"]
 
-# Always optimize; building and running the guest takes much longer without optimization.
-[profile.dev]
-opt-level = 3
-
-[profile.release]
-debug = 1
-lto = true
+[workspace.dependencies]
+pico-sdk = { git = "https://github.com/brevis-network/pico" }
+serde = { version = "1.0.205", features = ["derive"] }
+fhe = { git = "https://github.com/gnosisguild/fhe.rs", version = "0.1.0-beta.7" }
+fhe-traits = { git = "https://github.com/gnosisguild/fhe.rs", version = "0.1.0-beta.7" }
+fhe-util = { git = "https://github.com/gnosisguild/fhe.rs", version = "0.1.0-beta.7" }
+rand = "0.8.5"

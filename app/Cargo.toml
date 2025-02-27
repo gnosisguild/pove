@@ -1,0 +1,12 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+pico-sdk = { workspace = true }
+fhe = { workspace = true }
+fhe-traits = { workspace = true }
+fhe-util = { workspace = true }
+rand = { workspace = true }
+serde = { workspace = true }
